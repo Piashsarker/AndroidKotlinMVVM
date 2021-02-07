@@ -1,0 +1,176 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:text="@string/dindinn"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:layout_centerInParent="true"
+                android:text="@string/delivery"
+                android:textColor="@color/white">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_sheet_rounded_background"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            app:behavior_hideable="true"
+            app:layout_behavior="@string/view_pager_bottom_sheet_behavior"
+            app:behavior_peekHeight="320dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                style="@style/TabItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:tabMode="scrollable">
+
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:letterSpacing=".2"
+                    android:text="@string/filter"
+                    android:textAllCaps="true"
+                    android:textColor="#C1C1C1">
+
+                </TextView>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/spicy"
+                    android:textColor="#C1C1C1"
+                    android:textStyle="bold"
+                    app:chipBackgroundColor="#ffffff"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp"
+                    app:chipStrokeColor="#C1C1C1"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/vegan"
+                    android:textColor="#C1C1C1"
+                    android:textStyle="bold"
+                    app:chipBackgroundColor="#ffffff"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp"
+                    app:chipStrokeColor="#C1C1C1"
+                    app:chipStrokeWidth="1dp" />
+
+
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:id="@+id/txtCount"
+            android:visibility="gone"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/bg_round"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            app:layout_anchor="@id/fab" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

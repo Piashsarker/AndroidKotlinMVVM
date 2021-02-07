@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MvRxSample</string>
+    <string name="pizza">Pizza</string>
+    <string name="sushi">Sushi</string>
+    <string name="drinks">Drinks</string>
+    <string name="dindinn">Din Dinn</string>
+    <string name="delivery">Delivery</string>
+    <string name="description">Chicken, Mushroom, Paperoni, Avocado Mix, Fried with Vegetable and Butter</string>
+    <string name="price_demo">$60 USD</string>
+    <string name="filter">Filters</string>
+    <string name="vegan">Vegan</string>
+    <string name="spicy">Spicy</string>
+    <string name="menu">Menu</string>
+    <string name="cart">Cart</string>
+    <string name="order">Order</string>
+    <string name="information">Information</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:id="@+id/layoutConntainer"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="16dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/itemBannerCropper"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:id="@+id/ivFoodImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:transitionName="banner_transition" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvRestaurantName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="#333"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Pizzahut Bashundhara R/A" />
+
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="#707070"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="45 USD" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:src="@mipmap/ic_delete"
+                android:id="@+id/imgDelete"
+                android:layout_gravity="center_vertical"
+                android:layout_height="20dp">
+
+            </ImageView>
+
+
+        </LinearLayout>
+</layout>
